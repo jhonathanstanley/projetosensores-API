@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="sensoresModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="sensores">
+    <Key>
+      <PropertyRef Name="idSensor" />
+    </Key>
+    <Property Name="idSensor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="latitude" Type="varchar" MaxLength="100" />
+    <Property Name="longitude" Type="varchar" MaxLength="100" />
+    <Property Name="cidade" Type="varchar" MaxLength="100" />
+    <Property Name="estado" Type="varchar" MaxLength="100" />
+    <Property Name="bairoo" Type="varchar" MaxLength="100" />
+    <Property Name="rua" Type="varchar" MaxLength="100" />
+    <Property Name="pais" Type="varchar" MaxLength="100" />
+    <Property Name="luminosidade" Type="varchar" MaxLength="100" />
+    <Property Name="temperatura" Type="varchar" MaxLength="100" />
+    <Property Name="umidade" Type="varchar" MaxLength="100" />
+    <Property Name="proximidade" Type="varchar" MaxLength="100" />
+    <Property Name="dataEnvio" Type="datetime" />
+  </EntityType>
+  <EntityContainer Name="sensoresModelStoreContainer">
+    <EntitySet Name="sensores" EntityType="Self.sensores" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

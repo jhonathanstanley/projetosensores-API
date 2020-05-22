@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="sensoresModelStoreContainer" CdmEntityContainer="sensoresEntities">
+    <EntitySetMapping Name="sensores">
+      <EntityTypeMapping TypeName="sensoresModel.sensores">
+        <MappingFragment StoreEntitySet="sensores">
+          <ScalarProperty Name="dataEnvio" ColumnName="dataEnvio" />
+          <ScalarProperty Name="idSensor" ColumnName="idSensor" />
+          <ScalarProperty Name="latitude" ColumnName="latitude" />
+          <ScalarProperty Name="longitude" ColumnName="longitude" />
+          <ScalarProperty Name="cidade" ColumnName="cidade" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="bairoo" ColumnName="bairoo" />
+          <ScalarProperty Name="rua" ColumnName="rua" />
+          <ScalarProperty Name="pais" ColumnName="pais" />
+          <ScalarProperty Name="luminosidade" ColumnName="luminosidade" />
+          <ScalarProperty Name="temperatura" ColumnName="temperatura" />
+          <ScalarProperty Name="umidade" ColumnName="umidade" />
+          <ScalarProperty Name="proximidade" ColumnName="proximidade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

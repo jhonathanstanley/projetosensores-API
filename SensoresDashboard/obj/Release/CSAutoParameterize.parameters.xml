@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="sensoresEntities-Web.config Connection String" description="sensoresEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.SensoresModel.csdl|res://*/Models.SensoresModel.ssdl|res://*/Models.SensoresModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=fmu-stanley.database.windows.net;initial catalog=sensores;user id=sa_fmu;password=@Jhou0911;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Jhonathan\ Costa\\source\\repos\\SensoresAPI\\SensoresDashboard\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='sensoresEntities']/@connectionString" />
+  </parameter>
+</parameters>

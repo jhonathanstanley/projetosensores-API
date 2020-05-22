@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="sensoresModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="sensores">
+          <Key>
+            <PropertyRef Name="idSensor" />
+          </Key>
+          <Property Name="idSensor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="latitude" Type="varchar" MaxLength="100" />
+          <Property Name="longitude" Type="varchar" MaxLength="100" />
+          <Property Name="cidade" Type="varchar" MaxLength="100" />
+          <Property Name="estado" Type="varchar" MaxLength="100" />
+          <Property Name="bairoo" Type="varchar" MaxLength="100" />
+          <Property Name="rua" Type="varchar" MaxLength="100" />
+          <Property Name="pais" Type="varchar" MaxLength="100" />
+          <Property Name="luminosidade" Type="varchar" MaxLength="100" />
+          <Property Name="temperatura" Type="varchar" MaxLength="100" />
+          <Property Name="umidade" Type="varchar" MaxLength="100" />
+          <Property Name="proximidade" Type="varchar" MaxLength="100" />
+          <Property Name="dataEnvio" Type="datetime" />
+        </EntityType>
+        <EntityContainer Name="sensoresModelStoreContainer">
+          <EntitySet Name="sensores" EntityType="Self.sensores" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="sensoresModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="sensores">
+          <Key>
+            <PropertyRef Name="idSensor" />
+          </Key>
+          <Property Name="idSensor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="latitude" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="longitude" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="cidade" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="estado" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="bairoo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="rua" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="pais" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="luminosidade" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="temperatura" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="umidade" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="proximidade" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="dataEnvio" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="sensoresEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="sensores" EntityType="Self.sensores" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="sensoresModelStoreContainer" CdmEntityContainer="sensoresEntities">
+          <EntitySetMapping Name="sensores">
+            <EntityTypeMapping TypeName="sensoresModel.sensores">
+              <MappingFragment StoreEntitySet="sensores">
+                <ScalarProperty Name="dataEnvio" ColumnName="dataEnvio" />
+                <ScalarProperty Name="idSensor" ColumnName="idSensor" />
+                <ScalarProperty Name="latitude" ColumnName="latitude" />
+                <ScalarProperty Name="longitude" ColumnName="longitude" />
+                <ScalarProperty Name="cidade" ColumnName="cidade" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+                <ScalarProperty Name="bairoo" ColumnName="bairoo" />
+                <ScalarProperty Name="rua" ColumnName="rua" />
+                <ScalarProperty Name="pais" ColumnName="pais" />
+                <ScalarProperty Name="luminosidade" ColumnName="luminosidade" />
+                <ScalarProperty Name="temperatura" ColumnName="temperatura" />
+                <ScalarProperty Name="umidade" ColumnName="umidade" />
+                <ScalarProperty Name="proximidade" ColumnName="proximidade" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

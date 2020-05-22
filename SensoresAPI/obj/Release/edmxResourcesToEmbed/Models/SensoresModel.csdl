@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="sensoresModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="sensores">
+    <Key>
+      <PropertyRef Name="idSensor" />
+    </Key>
+    <Property Name="idSensor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="latitude" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="longitude" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="cidade" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="estado" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="bairoo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="rua" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="pais" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="luminosidade" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="temperatura" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="umidade" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="proximidade" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="dataEnvio" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="sensoresEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sensores" EntityType="Self.sensores" />
+  </EntityContainer>
+</Schema>
